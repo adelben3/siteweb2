@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: lightblue;  
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+
+</style>  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile</title>
+	<img src="https://media-exp1.licdn.com/dms/image/C4D1BAQEdTbP2jGt1aw/company-background_10000/0/1519799242794?e=2159024400&v=beta&t=7nj_J2oeL0xpOdA7o_hh8E3CBZJ9P9ty1T-nUTJ8i7Y" width="60%" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="columns is-centered">
+            <font size="+4">Bonjour {{g.user.username}} !</font>
+          </h1>
+        
+		<div class="field">
+				
+                <p class="control">
+				<form action="/analyses" method="post">
+                  <button type="submit" style= "background-color:blue;" class="button is-success">
+                    Mes analyses
+                  </button>
+				  </form>
+                </p>
+			   <br>
+                <p class="control">
+				<form action="/infos" method="post">
+                  <button type="submit" style= "background-color:blue;" class="button is-success">
+                    Mes informations
+                  </button>
+				</form>
+                </p>
+				
+              </div>
+			  </div>
+      </div>
+    </section>
+  </body>
+</html>
